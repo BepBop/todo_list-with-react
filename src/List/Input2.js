@@ -1,29 +1,19 @@
-import { useState } from "react";
+import { GrAdd } from "react-icons/gr";
 
 export default (props) => {
-	const [inputVal, set_inputVal] = useState("");
-
-	function catch_inputVal(e) {
-		set_inputVal(e.target.value);
-	}
-
 	function submit_inputVal(event) {
 		if (event.code === "Enter" || event.code === "NumpadEnter") {
-			event.preventDefault();
-			inputVal ? props.setArr((x) => [...x, inputVal]) : {};
-			set_inputVal("");
 		}
+		props.setArr((x) => [...x, " "]);
 	}
 
-	return (
-		<form>
-			<textarea
-				value={inputVal}
-				onChange={catch_inputVal}
-				onKeyDown={submit_inputVal}
-				rows="2"
-				cols="22"
-			/>
-		</form>
-	);
+	return(
+	<>
+		<div className={"hell"} onClick={submit_inputVal} onFocus={submit_inputVal}>
+		<button>
+			<GrAdd />
+		</button>
+		<input value={'Click her to add...'}/>
+		</div>
+	</>);
 };

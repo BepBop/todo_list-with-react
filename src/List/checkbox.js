@@ -1,4 +1,4 @@
-import { useState } from "react";
+import {useEffect, useState} from "react";
 
 export default (props) => {
 	const [check, set_check] = useState(false);
@@ -9,16 +9,14 @@ export default (props) => {
 	else if (parseInt(localStorage.getItem(props.column + 0), 10) < props.index)
 		localStorage.setItem(props.column + 0, props.index);
 
-	function hack() {
-		localStorage.setItem(props.column + props.index, String(text));
-		if (check) localStorage.removeItem(props.column + props.index);
-		return text;
+
+	function catch_inputVal(e){
+		set_text(e.target.value);
 	}
 
-	function hack_catch_inputVal(e) {
-		set_text(e.currentTarget.textContent);
-		localStorage.setItem(props.column + props.index, String(text));
-	}
+	useEffect(() => {
+		!check? localStorage.setItem(props.column + props.index, String(text)):localStorage.removeItem(props.column + props.index);;
+	}, );
 
 	return (
 		<form onSubmit={(e) => e.preventDefault()}>
@@ -28,20 +26,19 @@ export default (props) => {
 				onChange={() => set_check(!check)}
 			/>
 			{!check ? (
-				<span
+				<textarea
 					className={"textarea"}
-					onInput={hack_catch_inputVal}
-					contentEditable={true}
-				>
-					{hack()}
-				</span>
+					/*onInput={hack_catch_inputVal}*/
+					onInput={catch_inputVal}
+					value={text}
+				/>
 			) : (
-				<span
+				<textarea
 					className={"textarea"}
 					style={{ textDecorationLine: "line-through" }}
-				>
-					{hack()}
-				</span>
+					/*onInput={hack_catch_inputVal}*/
+					value={text}
+				/>
 			)}
 		</form>
 	);

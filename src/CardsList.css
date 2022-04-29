@@ -1,8 +1,26 @@
+.hell{
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.hell>button
+{
+	border-width: 0px;
+	background: #f6f54d;
+}
+
+.hell>input
+{
+	border-width: 0px;
+	background: #f6f54d	;
+}
+
+
 #CardList {
 	display: flex;
 	flex-flow: column wrap;
 	justify-content: flex-start;
-	align-items: flex-start;
+	align-items: stretch;
 	background: #f6f54d;
 	padding: 1rem 0;
 	border-radius: 0.5rem;
@@ -16,7 +34,7 @@
 
 #CardList textarea {
 	border-radius: 0.5rem;
-	padding: 1rem;
+	padding: 0.5rem 1rem;
 	margin-bottom: 1rem;
 	border: none;
 	resize: none;

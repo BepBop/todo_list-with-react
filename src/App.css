@@ -22,6 +22,8 @@
     grid-template:
     "one one one ";
     column-gap: 2rem;
+
+    font-family: 'Roboto', sans-serif;
 }
 
 .sign
