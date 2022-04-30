@@ -4,16 +4,16 @@ export default (props) => {
 	function submit_inputVal(event) {
 		if (event.code === "Enter" || event.code === "NumpadEnter") {
 		}
-		props.setArr((x) => [...x, " "]);
+		props.setArr((x) => [...x, ""]);
 	}
 
 	return(
 	<>
-		<div className={"hell"} onClick={submit_inputVal} onFocus={submit_inputVal}>
+		<div role={'button'} className={"hell"} onClick={submit_inputVal} onFocus={submit_inputVal} onKeyDown={submit_inputVal}>
 		<button>
 			<GrAdd />
 		</button>
-		<input value={'Click her to add...'}/>
+		<input value={'Click to add'}/>
 		</div>
 	</>);
 };
