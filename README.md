@@ -1,7 +1,7 @@
 # todo_list-with-react
 
 ## As to practice writing loosely coupled code, forced myself to refactor my projects after a month, 
-### refactoring was targeted at both Frontend and Layout
+Refactoring was targeted at both Frontend and Layout with arbritary goal as
 
 ## Style-1
 As a learning oppurtunity I constrained myelf to using 1 hook per componet. it was a fun learning expereince!  
