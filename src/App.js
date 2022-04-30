@@ -4,8 +4,8 @@ import { useState } from "react";
 import algo from "./algo";
 import "./App.css";
 
-import {AiOutlineAppstoreAdd} from "react-icons/ai";
-import {FiMinus} from "react-icons/fi";
+import { AiOutlineAppstoreAdd } from "react-icons/ai";
+import { FiMinus } from "react-icons/fi";
 
 export function App() {
 	const [cards, set_cards] = useState(algo()); //react is smart enough to call algo() only once
@@ -18,17 +18,19 @@ export function App() {
 
 	function del() {
 		set_cards(cards.filter((element, index) => index < cards.length - 1));
-		localStorage.getItem("0") !== "0" ? localStorage.setItem("0", (cards.length - 1).toString()) : {};
+		localStorage.getItem("0") !== "0"
+			? localStorage.setItem("0", (cards.length - 1).toString())
+			: {};
 	}
 
 	return (
 		<React.StrictMode>
 			<div className={"sign"}>
 				<div style={{ fontSize: "50px", cursor: "pointer" }} onClick={add}>
-					<AiOutlineAppstoreAdd/>
+					<AiOutlineAppstoreAdd />
 				</div>
 				<div style={{ fontSize: "50px", cursor: "pointer" }} onClick={del}>
-					<FiMinus/>
+					<FiMinus />
 				</div>
 			</div>
 			<div className={"cards"}>
