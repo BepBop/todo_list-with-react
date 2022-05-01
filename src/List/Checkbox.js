@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import ContentEditable from "react-contenteditable";
 
-export default (props) => {
+export default function Checkbox (props) {
 	const [check, set_check] = useState(false);
 	const [text, set_text] = useState(props.defValue);
 
@@ -15,10 +15,10 @@ export default (props) => {
 		if (check) localStorage.removeItem(props.column + props.index);
 		return text;
 	}
-
 	function catch_inputVal(e) {
 		set_text(e.currentTarget.textContent);
 	}
+
 
 	return (
 		<form onSubmit={(e) => e.preventDefault()}>
@@ -28,15 +28,13 @@ export default (props) => {
 				onChange={() => set_check(!check)}
 			/>
 			{!check ? (
-				<ContentEditable className={"textarea"}  onChange={catch_inputVal} onInput={hack} html={hack()}>
-				</ContentEditable>
+				<ContentEditable className={"textarea"}  onChange={catch_inputVal} onInput={hack} html={hack()}/>
 			) : (
 				<ContentEditable
 					className={"textarea"}
 					html={hack()}
 					style={{ textDecorationLine: "line-through" }}
-				>
-				</ContentEditable>
+				/>
 			)}
 		</form>
 	);

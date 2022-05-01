@@ -1,10 +1,10 @@
 import { useState } from "react";
 import listAlgo from "./List/algo";
 import Input2 from "./List/Input2";
-import Checkbox from "./List/checkbox";
+import Checkbox from "./List/Checkbox";
 import "./CardsList.css";
 
-export default (props) => {
+export default function CardsList (props) {
 	let j = props.j;
 
 	//used to fix localstorage keys when something in between gets del and generating an array off it
