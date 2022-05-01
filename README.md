@@ -1,6 +1,6 @@
 # todo_list-with-react
 
-## As to practice writing loosely coupled code,forced myself to refactor my projects after a month
+## As to practice writing loosely coupled code, forced myself to refactor my projects after a month
 Refactoring was targeted at both React and CSS with arbritary goal as
 
 ## Style-1
