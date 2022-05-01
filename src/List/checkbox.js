@@ -16,9 +16,8 @@ export default (props) => {
 		return text;
 	}
 
-	function hack_catch_inputVal(e) {
+	function catch_inputVal(e) {
 		set_text(e.currentTarget.textContent);
-		localStorage.setItem(props.column + props.index, String(text));
 	}
 
 	return (
@@ -29,7 +28,7 @@ export default (props) => {
 				onChange={() => set_check(!check)}
 			/>
 			{!check ? (
-				<ContentEditable className={"textarea"}  onChange={hack_catch_inputVal} onInput={hack} html={hack()}>
+				<ContentEditable className={"textarea"}  onChange={catch_inputVal} onInput={hack} html={hack()}>
 				</ContentEditable>
 			) : (
 				<ContentEditable

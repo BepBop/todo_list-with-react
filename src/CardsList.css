@@ -31,13 +31,14 @@
 }
 
 .textarea {
-	border-style: none;
 	max-width: 12em;
-	display: block;
-	overflow: hidden;
-	resize: none;
+	min-width: 1em;
+	border: 0 solid black;
+	border-bottom-width: 2px;
 }
 
 .textarea:focus {
 	outline: none;
 }
+
+
