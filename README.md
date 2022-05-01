@@ -4,7 +4,7 @@
 Refactoring was targeted at both Frontend and Layout with arbritary goal as
 
 ## Style-1
-As a learning oppurtunity I constrained myelf to using 1 hook per componet. it was a fun learning expereince!  
+As a learning oppurtunity I constrained myelf to using 1 hook i.e useState. it was a fun learning expereince!  
 ![image](https://user-images.githubusercontent.com/33974452/166087354-20bc79e0-e216-444b-9d06-78a190e3d573.png)
 
 
