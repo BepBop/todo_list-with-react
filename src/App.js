@@ -35,7 +35,7 @@ export function App() {
 			</div>
 			<div className={"cards"}>
 				{cards.map((x) => (
-					<CardsList j={x} />
+					<CardsList j={x}/>
 				))}
 			</div>
 		</React.StrictMode>

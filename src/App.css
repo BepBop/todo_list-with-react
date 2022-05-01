@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cousine&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
 body {
 	padding: 5%;
@@ -8,7 +8,7 @@ body {
 	display: grid;
 	grid-template: "one one one";
 	column-gap: 2rem;
-	font-family: "Cousine", monospace;
+	font-family: 'Noto Sans', sans-serif;
 }
 
 .cards {

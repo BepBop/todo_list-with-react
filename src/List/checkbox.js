@@ -1,4 +1,5 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import ContentEditable from "react-contenteditable";
 
 export default (props) => {
 	const [check, set_check] = useState(false);
@@ -28,20 +29,15 @@ export default (props) => {
 				onChange={() => set_check(!check)}
 			/>
 			{!check ? (
-				<span
-					className={"textarea"}
-					onInput={hack_catch_inputVal}
-					contentEditable={true}
-				>
-					{hack()}
-				</span>
+				<ContentEditable className={"textarea"}  onChange={hack_catch_inputVal} onInput={hack} html={hack()}>
+				</ContentEditable>
 			) : (
-				<span
+				<ContentEditable
 					className={"textarea"}
+					html={hack()}
 					style={{ textDecorationLine: "line-through" }}
 				>
-					{hack()}
-				</span>
+				</ContentEditable>
 			)}
 		</form>
 	);
