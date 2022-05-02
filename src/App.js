@@ -24,12 +24,12 @@ export function App() {
 	return (
 		<React.StrictMode>
 			<div className={"sign"}>
-				<div style={{ fontSize: "50px", cursor: "pointer" }} onClick={add}>
-					<AiOutlineAppstoreAdd/>
-				</div>
-				<div style={{ fontSize: "50px", cursor: "pointer" }} onClick={del}>
-					<FiMinus/>
-				</div>
+				<button style={{ fontSize: "50px", cursor: "pointer",background:'transparent', border:'none' }} onClick={add}>
+					<AiOutlineAppstoreAdd />
+				</button>
+				<button style={{ fontSize: "50px", cursor: "pointer",background:'transparent', border:'none' }} onClick={del}>
+					<FiMinus />
+				</button>
 			</div>
 			<div className={"cards"}>
 				{cards.map((x) => (

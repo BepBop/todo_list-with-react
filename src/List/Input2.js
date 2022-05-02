@@ -9,7 +9,7 @@ export default (props) => {
 
 	return(
 	<>
-		<div role={'button'} className={"hell"} onClick={submit_inputVal} onFocus={submit_inputVal} onKeyDown={submit_inputVal}>
+		<div role={'button'} className={"hell"} onClick={submit_inputVal} onFocus={submit_inputVal}>
 		<button>
 			<GrAdd />
 		</button>
